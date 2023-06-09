@@ -90,3 +90,16 @@ ul{
     /* transform: translateY(0); */
     transform: scale(1);
 }
+ 
+.ratingGreen{
+    color: green;
+}
+.ratingYellow{
+    color: yellow;
+}
+.ratingOrange{
+    color: orange;
+}
+.ratingWhite{
+    color: White;
+}

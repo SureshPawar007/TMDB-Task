@@ -26,8 +26,8 @@ movieArr.forEach(movie =>
                </p>
              </div>
              <div class="col-3">
-               <p class="details rating">
-              ${movie.vote_average}
+               <p class="details rating ${colors(movie.vote_average)}" id="badge" >
+                ${movie.vote_average} 
                </p>
              </div>
             </div>
@@ -45,17 +45,17 @@ movieArr.forEach(movie =>
 
 movieInfo.innerHTML = result;
 
-// const ratId = document.getElementById("ratId");
+const ratId = document.getElementById("ratId");
 
 function colors(rating){
     if(rating >= 8){
-        return "green";
+        return "ratingGreen";
     }else if(rating >= 5){
-        return "yellow";
+        return "ratingYellow";
     }else if(rating >= 4){
-        return "orange";
+        return "ratingOrange";
     }else{
-        return "white";
+        return "ratingWhite";
     }
 }
 
@@ -63,4 +63,5 @@ function colors(rating){
 
 // cl(output);
 
-// card.innerHTML = result;
+ratId.innerHTML = result;
+

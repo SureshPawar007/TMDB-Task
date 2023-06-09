@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color:#22254b;
+    --secondary-color:#373b69;
+    --color-white:#fff;
+    --color-orange:orange;
+}
+
+body{
+    background-color: var(--secondary-color);
+}
+
+.logo:link, .link:visited{  /*pseudo class used for logo color change */
+    font-size: 36px;
+    color: var(--color-white);
+}
+
+.header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    line-height: 1;
+}
+
+a:link, a:visited{
+    text-decoration: none; /* underline purpose*/
+    color: var(--color-white);
+}
+
+ul{
+    list-style: none;
+}
+
+.imdbCard figure{
+    height: 450px;
+    margin: 0px;
+}
+
+.cardImg{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;  /*img compress purpose */
+}
+
+.card.imdbCard {
+    overflow: hidden;
+}
+
+.imdbCard figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:var(--primary-color);
+    line-height: 1;
+    padding: 20px;
+    color: var(--color-white);
+    font-size: 18px;
+}
+
+.rating{
+    display: inline-block;
+    color:var(--color-orange);
+}
+
+.overview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 20px;
+    max-height: 75%;
+    overflow-y: auto;
+    /* transform: translateY(110%); */
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.overview h3{
+    text-align: center;
+}
+
+.card.imdbCard:hover .overview{
+    /* transform: translateY(0); */
+    transform: scale(1);
+}
